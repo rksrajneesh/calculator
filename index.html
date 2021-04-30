@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajneesh Calculator</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(150deg,rgb(209, 22, 53),blue);
+            font-family: sans-serif;
+        }
+        .container{
+            align-items: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #input{
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            width: 270px;
+            height: 40px;
+            text-align: end;
+            font-size: xx-large;
+        }
+        .btn{
+            background: rgba(64, 92, 9, 0.51);
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin: 3px;
+            width: 60px;
+            height: 50px;
+        }
+        #btnC{
+            background: rgba(64, 92, 92, 0.51);
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin: 3px;
+            width: 132px;
+            height: 50px;
+        }
+        #btn0{
+            border: 2px solid black;
+            border-radius: 5px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin: 3px;
+            width: 200px;
+            height: 50px;
+        }
+        @media (max-width: 450px) {
+           .container{
+               height: 700px;
+               justify-content: flex-end;
+               font-size: xx-large;
+           }
+           .btn{
+               height: 70px;
+               margin: 5px;
+               font-size: xx-large;
+           }
+           #input{
+            width: 285px;
+            height: 70px;
+            margin: 5px;
+            font-size: xx-large;
+           }
+           #btn0{
+            height: 70px;
+            margin: 6px;
+            width: 216px;
+            font-size: xx-large;
+           }
+           #btnC{
+            height: 70px;
+            width: 136px;
+            margin: 5px;
+            font-size: xx-large;
+           }
+        }
+    </style>
+</head>
+<body>
+    <marquee direction="right">This Calculator is made by Rajneesh Kr. Sah</marquee>
+    <div class="container">
+        <form name="form">
+            <input type="text" name="result" id="input">
+            <div>
+            <input type="button" value="Clear" onclick="form.result.value = ' '" id="btnC">
+            <input type="button" value="." onclick="form.result.value += '.'" class="btn">
+            <input type="button" value="/" onclick="form.result.value += '/'" class="btn">
+        </div>
+            <div>
+            <input type="button" value="1" onclick="form.result.value += '1'" class="btn">
+            <input type="button" value="2" onclick="form.result.value += '2'" class="btn">
+            <input type="button" value="3" onclick="form.result.value += '3'" class="btn">
+            <input type="button" value="X" onclick="form.result.value += '*'" class="btn">
+        </div>
+            <div>
+            <input type="button" value="4" onclick="form.result.value += '4'" class="btn">
+            <input type="button" value="5" onclick="form.result.value += '5'" class="btn">
+            <input type="button" value="6" onclick="form.result.value += '6'" class="btn">
+            <input type="button" value="-" onclick="form.result.value += '-'" class="btn">
+        </div>
+            <div>
+            <input type="button" value="7" onclick="form.result.value += '7'" class="btn">
+            <input type="button" value="8" onclick="form.result.value += '8'" class="btn">
+            <input type="button" value="9" onclick="form.result.value += '9'" class="btn">
+            <input type="button" value="+" onclick="form.result.value += '+'" class="btn">
+        </div>
+        <div>
+            <input type="button" value="0" onclick="form.result.value += '0'" id="btn0">
+            <input type="button" value="=" onclick="form.result.value = eval(form.result.value)" class="btn">
+        </div>
+        </form>
+    </div>
+</body>
+</html>
